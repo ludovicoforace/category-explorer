@@ -1,7 +1,7 @@
 {
   "name": "category-explorer",
   "author": "Ludovico Forace <ludovicoforace@yahoo.com>",
-  "description": "Recursively creates categories from flat json",
+  "description": "Recursively creates categories from a flat json",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
