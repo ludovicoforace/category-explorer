@@ -26,6 +26,11 @@ function app(state = initialState(), action) {
         isFetching: false,
         errorMessage: action.errorMessage
       };
+    case types.UPDATE_CATEGORY_TREE:
+      return {
+        ...state,
+        categories: action.categories
+      };
     default:
       return state;
   }
@@ -36,11 +41,9 @@ export function category(state, action) {
     case types.RECEIVE_CATEGORY_TREE:
       return {
         id: state.id,
-        name: state.name,
         parent_id: state.parent_id,
-        depth: state.depth,
-        node_children_count: state.node_children_count,
-        node_video_count: state.node_video_count,
+        title: state.name,
+        tree_video_count: state.tree_video_count,
         isClicked: state.node_children_count ? false : null
       };
     default:

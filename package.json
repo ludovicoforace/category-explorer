@@ -1,6 +1,7 @@
 {
   "name": "category-explorer",
   "author": "Ludovico Forace <ludovicoforace@yahoo.com>",
+  "description": "Recursively creates categories from flat json",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,7 +9,12 @@
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
-    "redux": "^4.0.0"
+    "react-sortable-tree": "^2.2.0",
+    "react-sortable-tree-theme-minimal": "^0.0.13",
+    "react-spinners": "^0.3.2",
+    "redux": "^4.0.0",
+    "sash-layout": "^1.2.13",
+    "styled-components": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",

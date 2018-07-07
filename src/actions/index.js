@@ -9,6 +9,11 @@ const receiveCategoryTree = (body) => ({
   body: body
 });
 
+export const updateCategoryTree = (tree) => ({
+  type: types.UPDATE_CATEGORY_TREE,
+  categories: tree
+});
+
 const httpError = (error) => ({
   type: types.HTTP_ERROR,
   errorMessage: error
@@ -16,8 +21,8 @@ const httpError = (error) => ({
 
 export const fetchCategoryTree = () => (dispatch) => {
   dispatch(requestCategoryTree());
-  // const url = 'https://vzaar-frontend-test.herokuapp.com';
-  const url = 'local.json';
+  const url = 'https://vzaar-frontend-test.herokuapp.com';
+  // const url = 'local.json';
   return fetch(url)
     .then(response => {
       if (!response.ok) {

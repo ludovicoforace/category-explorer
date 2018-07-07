@@ -59,11 +59,9 @@ describe('Synchronous Actions', () => {
         };
         const output = {
           id: 16812,
-          name: "Science",
           parent_id: null,
-          depth: 0,
-          node_children_count: 4,
-          node_video_count: 0,
+          title: 'Science',
+          tree_video_count: 0,
           isClicked: false
         };
         deepFreeze(input);
@@ -86,8 +84,8 @@ describe('Asynchronous Actions', () => {
   describe('> App reducer', () => {
     describe('RECEIVE_CATEGORY_TREE when fetching has been done', () => {
       it('Should match expectedActions', () => {
-        // const url = 'https://vzaar-frontend-test.herokuapp.com';
-        const url = 'local.json';
+        const url = 'https://vzaar-frontend-test.herokuapp.com';
+        // const url = 'local.json';
 
         fetchMock
           .getOnce(url, {
